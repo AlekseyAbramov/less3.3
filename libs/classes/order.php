@@ -4,11 +4,13 @@ namespace classes;
 require_once 'cart.php';
 
 class order extends cart {
-    public function __construct() {
+    public function __construct()
+    {
         ;
     }
 
-    public function getOrder() {
+    public function getOrder()
+    {
         echo '<h1>Ваш заказ</h1>';
         echo '<table><thedd>'. '<tr><td>Название</td><td>Цена</td><td>Количество</td></tr>'. '</thedd>';
         echo '<tbody>';

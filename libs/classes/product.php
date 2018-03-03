@@ -7,11 +7,14 @@ abstract class product {
     public $discount;
     public $price;
     public $getPrice;
-    public function __construct($brand, $price) {
+    public $color;
+    public function __construct($brand, $price)
+    {
         $this->brand = $brand;
         $this->price = $price;
     }
-        public function getPrices() {
+    public function getPrices()
+    {
         if (!empty($this->discount)) {
             $this->getPrice = $this->price  * (100 - $this->discount) / 100;
         } else {

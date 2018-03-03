@@ -7,19 +7,22 @@ require_once 'interfaces'. DIRECTORY_SEPARATOR. 'view.php';
 
 class duck extends product implements viewPrice {
     public $wt;
-    public function __construct($brand, $price, $wt) {
+    public function __construct($brand, $price, $wt) 
+    {
         $this->brand = $brand;
         $this->price = $price;
         $this->wt = $wt;
     }
-    public function getPrices() {
+    public function getPrices()
+    {
         $this->getPrice = $this->wt * $this->price;
         if (!empty($this->discount)) {
             $this->getPrice = $this->getPrice  * (100 - $this->getPrice) / 100;
         }
         return $this->getPrice;
     }
-    public function viewPrice() {
+    public function viewPrice()
+    {
         if (!empty($this->getPrice) && !empty($this->discount)) {
             echo 'Цена утки '. $this->brand. ' весом'. $this->wt. 'кг. составляет '. $this->getPrice. ' руб.'. '<br>';
             echo '<br>'. 'Ваша скидка составила '. $this->discount. '%'. '<br>';
