@@ -23,4 +23,7 @@ class car extends product implements viewPrice {
             echo 'Цена автомобиля '. $this->brand. ' '. $this->model. ', без расчета скидки, составляет '. $this->price. ' руб.'. '<br>';
         }
     }
+    public function editDiscount($discount) {
+        $this->discount = $discount;
+    }
 }

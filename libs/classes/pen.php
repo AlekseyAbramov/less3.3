@@ -17,4 +17,7 @@ class pen extends product implements viewPrice {
             echo 'Цена ручки '. $this->brand. ' '. $this->model. ', без расчета скидки, составляет '. $this->price. ' руб.'. '<br>';
         }
     }
+    public function editDiscount($discount) {
+        $this->discount = $discount;
+    }
 }

@@ -22,4 +22,5 @@ abstract class product {
         }
         return $this->getPrice;
     }
+    abstract function editDiscount($discount);
 }

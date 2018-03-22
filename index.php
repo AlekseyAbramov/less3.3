@@ -6,6 +6,8 @@ session_start();
         
 $car1 = new classes\car('Lada', 'Granta', 400000);
 $car1->discount = 10;
+$newDiscount = 15;
+$car1->editDiscount($newDiscount);
 $car1->getPrices();
 $car1->viewPrice();
        

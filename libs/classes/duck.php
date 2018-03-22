@@ -31,4 +31,7 @@ class duck extends product implements viewPrice {
             echo 'Цена утки '. $this->brand. ' весом '. $this->wt. 'кг., без расчета скидки, составляет '. $this->getPrice. ' руб.'. '<br>';
         }
     }
+    public function editDiscount($discount) {
+        $this->discount = $discount;
+    }
 }
